@@ -8,13 +8,13 @@ home_ws() {
   com.apple.iCal) echo C ;;
   com.apple.mail) echo M ;;
   net.ankiweb.dtop) echo A ;;
-  com.anthropic.claudefordesktop) echo I ;;
+  com.anthropic.claudefordesktop) echo 1 ;;
   com.vivaldi.Vivaldi) echo V ;;
   com.brave.Browser) echo B ;;
   com.hnc.Discord) echo D ;;
   notion.id) echo N ;;
   md.obsidian) echo O ;;
-  com.mitchellh.ghostty) echo G ;;
+  com.mitchellh.ghostty) echo 1 ;;
   info.sioyek.sioyek) echo S ;;
   org.mozilla.firefox) echo F ;;
   com.apple.finder) echo 1 ;;
@@ -28,8 +28,13 @@ restore() {
     ws=$(home_ws "$bundle")
     if [ -n "$ws" ]; then
       $AS move-node-to-workspace --window-id "$id" "$ws"
-      # 1 och G är flytande utanför presets
-      case "$ws" in 1 | G) $AS layout --window-id "$id" floating ;; esac
+      # På workspace 1 är Ghostty och Claude tilade, allt annat flytande
+      if [ "$ws" = 1 ]; then
+        case "$bundle" in
+        com.mitchellh.ghostty | com.anthropic.claudefordesktop) $AS layout --window-id "$id" tiling ;;
+        *) $AS layout --window-id "$id" floating ;;
+        esac
+      fi
     fi
   done
 }
@@ -69,12 +74,31 @@ first_window_in_ws() {
   $AS list-windows --workspace "$PRESET_WS" --format '%{window-id}' | head -1
 }
 
+# Workspace 1: Ghostty (vänster 2/3) och Claude (höger 1/3), tilade
+home1() {
+  g=$(first_window com.mitchellh.ghostty)
+  c=$(first_window com.anthropic.claudefordesktop)
+  for id in $g $c; do
+    $AS move-node-to-workspace --window-id "$id" 1
+    $AS layout --window-id "$id" tiling
+  done
+  $AS flatten-workspace-tree --workspace 1
+  [ -n "$g" ] && $AS layout --window-id "$g" h_tiles
+  $AS balance-sizes --workspace 1
+  if [ -n "$g" ] && [ -n "$c" ]; then
+    W=$(osascript -e 'tell application "Finder" to get bounds of window of desktop' | awk -F', ' '{print $3}')
+    [ -n "$W" ] && $AS resize --window-id "$g" width +$((W / 6))
+  fi
+}
+
 case "$1" in
 work1) place com.vivaldi.Vivaldi com.mitchellh.ghostty com.anthropic.claudefordesktop ;;
 work2) place com.vivaldi.Vivaldi md.obsidian com.anthropic.claudefordesktop ;;
-work3) place info.sioyek.sioyek md.obsidian com.anthropic.claudefordesktop ;;
+work3) place md.obsidian info.sioyek.sioyek com.anthropic.claudefordesktop ;;
+home1) home1 ;;
 restore)
   restore
+  home1
   $AS workspace 1
   ;;
 esac

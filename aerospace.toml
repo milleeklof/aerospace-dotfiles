@@ -237,7 +237,7 @@ run = 'move-node-to-workspace M'
 
 [[on-window-detected]]
 if.app-id = 'com.anthropic.claudefordesktop'
-run = 'move-node-to-workspace I'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'net.ankiweb.dtop'
@@ -249,7 +249,7 @@ run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['layout floating', 'move-node-to-workspace G']
+run = ['move-node-to-workspace 1', 'move left']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
