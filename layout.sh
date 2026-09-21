@@ -65,14 +65,24 @@ place() {
   $AS workspace "$PRESET_WS"
 }
 
+# Gör fönstret bredare än 50/50 (ca 2/3) i en tvåkolumnslayout
+widen() {
+  local id W
+  id=$($AS list-windows --workspace "$PRESET_WS" --format '%{window-id}|%{app-bundle-id}' | awk -F'|' -v b="$1" '$2==b {print $1; exit}')
+  [ -z "$id" ] && return
+  [ "$($AS list-windows --workspace "$PRESET_WS" --count)" -ge 2 ] || return
+  W=$(osascript -e 'tell application "Finder" to get bounds of window of desktop' | awk -F', ' '{print $3}')
+  $AS resize --window-id "$id" width +$((W / 6))
+}
+
 first_window_in_ws() {
   $AS list-windows --workspace "$PRESET_WS" --format '%{window-id}' | head -1
 }
 
 case "$1" in
-work1) place com.vivaldi.Vivaldi com.mitchellh.ghostty com.anthropic.claudefordesktop ;;
+work1) place com.mitchellh.ghostty com.anthropic.claudefordesktop; widen com.mitchellh.ghostty ;;
 work2) place com.vivaldi.Vivaldi md.obsidian com.anthropic.claudefordesktop ;;
-work3) place info.sioyek.sioyek md.obsidian com.anthropic.claudefordesktop ;;
+work3) place md.obsidian info.sioyek.sioyek com.anthropic.claudefordesktop ;;
 restore)
   restore
   $AS workspace 1

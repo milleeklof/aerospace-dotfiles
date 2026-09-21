@@ -71,9 +71,11 @@ Skriptet `aerospace/layout.sh` flyttar appar till workspace 5, tilar dem och bal
 
 | Preset | Vänster | Mitten | Höger |
 |---|---|---|---|
-| `work1` | Vivaldi | Ghostty | Claude |
+| `work1` | Ghostty (2/3) | – | Claude (1/3) |
 | `work2` | Vivaldi | Obsidian | Claude |
-| `work3` | Sioyek | Obsidian | Claude |
+| `work3` | Obsidian | Sioyek | Claude |
+
+`work1` är en tvåkolumnslayout: Ghostty får ca 2/3 av bredden och Claude 1/3 (skriptet gör Ghostty bredare efter balanseringen).
 
 `restore` (hyper + `p`, sedan `r`) skickar varje app hem till sin workspace enligt `home_ws` i skriptet, gör 1 och G flytande igen och byter till workspace 1. Varje preset börjar med `restore`, så man kan hoppa direkt mellan dem.
 
