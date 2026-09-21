@@ -1,0 +1,12 @@
+{
+  "description": "Right Option -> Hyper (ctrl+opt+cmd)",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": { "key_code": "right_option", "modifiers": { "optional": ["any"] } },
+      "to": [
+        { "key_code": "left_control", "modifiers": ["left_option", "left_command"] }
+      ]
+    }
+  ]
+}
