@@ -16,6 +16,7 @@ home_ws() {
   md.obsidian) echo O ;;
   com.mitchellh.ghostty) echo G ;;
   info.sioyek.sioyek) echo S ;;
+  com.spotify.client) echo Y ;;
   org.mozilla.firefox) echo F ;;
   com.apple.finder) echo 1 ;;
   com.apple.MobileSMS) echo 1 ;;

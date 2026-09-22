@@ -14,7 +14,7 @@ Min fönsterhantering: [AeroSpace](https://github.com/nikitabobko/AeroSpace) (i3
 
 Grundregeln är att **allt jag använder ofta har en egen workspace där det alltid ligger öppet**. Jag kommer åt det på ett ögonblick, och i regel ligger varje app ensam i helskärm. På det viset används AeroSpace mest som en snabb appväxlare, inte som ett tiling-verktyg.
 
-- **Bokstavsworkspaces (A, B, C, D, G, I, M, N, O, S, V):** en app var, alltid öppen, alltid ensam. Hyper + bokstav tar mig dit, och hyper + `tab` hoppar mellan de två senaste.
+- **Bokstavsworkspaces (A, B, C, D, G, I, M, N, O, S, V, Y):** en app var, alltid öppen, alltid ensam. Hyper + bokstav tar mig dit, och hyper + `tab` hoppar mellan de två senaste.
 - **Workspace 1, vardagsytan:** flytande fönster för det jag har uppe lite här och där, som Meddelanden, Anteckningar, Foton, samt fönster från kod (Python, OpenGL). Där beter sig fönstren som utan AeroSpace.
 - **Workspace 2–4, tillfälligt:** fönster i helskärm som jag inte använder ofta utan bara behöver just nu.
 - **Workspace 5, presets:** vissa stunder vill jag arbeta på ett visst sätt, till exempel Vivaldi, Obsidian och Claude bredvid varandra. Då kör jag ett preset (hyper + `p`, sedan `1`, `2` eller `3`). Apparna lånas till workspace 5 och tilas. Hyper + `p`, sedan `r` skickar hem dem igen till sina egna workspaces och tar mig till workspace 1.
@@ -64,6 +64,7 @@ Service mode: `f` växlar flytande/tiling, `r` återställer layouten (`flatten-
 | O | Obsidian |
 | S | Sioyek |
 | V | Vivaldi |
+| Y | Spotify |
 
 ## Presets
 
