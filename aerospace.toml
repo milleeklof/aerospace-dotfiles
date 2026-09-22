@@ -248,6 +248,26 @@ if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.vivaldi.Vivaldi'
+run = 'move-node-to-workspace V'
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace N'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+if.app-id = 'info.sioyek.sioyek'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = ['layout floating', 'move-node-to-workspace G']
 
