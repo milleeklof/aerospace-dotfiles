@@ -51,7 +51,7 @@ automatically-unhide-macos-hidden-apps = false
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B",
-                         "C", "D", "E", "F", "G", "I", "M", "N", "O", "P", "Q",
+                         "C", "D", "E", "F", "G", "I", "M", "N", "O", "Q",
                          "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 # A callback that runs every time binding mode changes
@@ -163,38 +163,36 @@ gaps.outer.right =      0
     ctrl-alt-cmd-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    ctrl-alt-cmd-shift-1 = 'move-node-to-workspace 1'
-    ctrl-alt-cmd-shift-2 = 'move-node-to-workspace 2'
-    ctrl-alt-cmd-shift-3 = 'move-node-to-workspace 3'
-    ctrl-alt-cmd-shift-4 = 'move-node-to-workspace 4'
-    ctrl-alt-cmd-shift-5 = 'move-node-to-workspace 5'
-    ctrl-alt-cmd-shift-6 = 'move-node-to-workspace 6'
-    ctrl-alt-cmd-shift-7 = 'move-node-to-workspace 7'
-    ctrl-alt-cmd-shift-8 = 'move-node-to-workspace 8'
-    ctrl-alt-cmd-shift-9 = 'move-node-to-workspace 9'
-    ctrl-alt-cmd-shift-a = 'move-node-to-workspace A'
-    ctrl-alt-cmd-shift-b = 'move-node-to-workspace B'
-    ctrl-alt-cmd-shift-c = 'move-node-to-workspace C'
-    ctrl-alt-cmd-shift-d = 'move-node-to-workspace D'
-    ctrl-alt-cmd-shift-e = 'move-node-to-workspace E'
-    ctrl-alt-cmd-shift-f = 'move-node-to-workspace F'
-    ctrl-alt-cmd-shift-g = 'move-node-to-workspace G'
-    ctrl-alt-cmd-shift-i = 'move-node-to-workspace I'
-    ctrl-alt-cmd-shift-m = 'move-node-to-workspace M'
-    ctrl-alt-cmd-shift-n = 'move-node-to-workspace N'
-    ctrl-alt-cmd-shift-o = 'move-node-to-workspace O'
-    ctrl-alt-cmd-shift-p = 'move-node-to-workspace P'
-    ctrl-alt-cmd-shift-q = 'move-node-to-workspace Q'
-    ctrl-alt-cmd-shift-r = 'move-node-to-workspace R'
-    ctrl-alt-cmd-shift-s = 'move-node-to-workspace S'
-    ctrl-alt-cmd-shift-t = 'move-node-to-workspace T'
-    ctrl-alt-cmd-shift-u = 'move-node-to-workspace U'
-    ctrl-alt-cmd-shift-v = 'move-node-to-workspace V'
-    ctrl-alt-cmd-shift-w = 'move-node-to-workspace W'
-    ctrl-alt-cmd-shift-x = 'move-node-to-workspace X'
-    ctrl-alt-cmd-shift-y = 'move-node-to-workspace Y'
-    ctrl-alt-cmd-shift-z = 'move-node-to-workspace Z'
-
+    ctrl-alt-cmd-shift-1 = ['layout floating', 'move-node-to-workspace 1']
+    ctrl-alt-cmd-shift-2 = ['layout tiling', 'move-node-to-workspace 2']
+    ctrl-alt-cmd-shift-3 = ['layout tiling', 'move-node-to-workspace 3']
+    ctrl-alt-cmd-shift-4 = ['layout tiling', 'move-node-to-workspace 4']
+    ctrl-alt-cmd-shift-5 = ['layout tiling', 'move-node-to-workspace 5']
+    ctrl-alt-cmd-shift-6 = ['layout tiling', 'move-node-to-workspace 6']
+    ctrl-alt-cmd-shift-7 = ['layout tiling', 'move-node-to-workspace 7']
+    ctrl-alt-cmd-shift-8 = ['layout tiling', 'move-node-to-workspace 8']
+    ctrl-alt-cmd-shift-9 = ['layout tiling', 'move-node-to-workspace 9']
+    ctrl-alt-cmd-shift-a = ['layout tiling', 'move-node-to-workspace A']
+    ctrl-alt-cmd-shift-b = ['layout tiling', 'move-node-to-workspace B']
+    ctrl-alt-cmd-shift-c = ['layout tiling', 'move-node-to-workspace C']
+    ctrl-alt-cmd-shift-d = ['layout tiling', 'move-node-to-workspace D']
+    ctrl-alt-cmd-shift-e = ['layout tiling', 'move-node-to-workspace E']
+    ctrl-alt-cmd-shift-f = ['layout tiling', 'move-node-to-workspace F']
+    ctrl-alt-cmd-shift-g = ['layout tiling', 'move-node-to-workspace G']
+    ctrl-alt-cmd-shift-i = ['layout tiling', 'move-node-to-workspace I']
+    ctrl-alt-cmd-shift-m = ['layout tiling', 'move-node-to-workspace M']
+    ctrl-alt-cmd-shift-n = ['layout tiling', 'move-node-to-workspace N']
+    ctrl-alt-cmd-shift-o = ['layout tiling', 'move-node-to-workspace O']
+    ctrl-alt-cmd-shift-q = ['layout tiling', 'move-node-to-workspace Q']
+    ctrl-alt-cmd-shift-r = ['layout tiling', 'move-node-to-workspace R']
+    ctrl-alt-cmd-shift-s = ['layout tiling', 'move-node-to-workspace S']
+    ctrl-alt-cmd-shift-t = ['layout tiling', 'move-node-to-workspace T']
+    ctrl-alt-cmd-shift-u = ['layout tiling', 'move-node-to-workspace U']
+    ctrl-alt-cmd-shift-v = ['layout tiling', 'move-node-to-workspace V']
+    ctrl-alt-cmd-shift-w = ['layout tiling', 'move-node-to-workspace W']
+    ctrl-alt-cmd-shift-x = ['layout tiling', 'move-node-to-workspace X']
+    ctrl-alt-cmd-shift-y = ['layout tiling', 'move-node-to-workspace Y']
+    ctrl-alt-cmd-shift-z = ['layout tiling', 'move-node-to-workspace Z']
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     ctrl-alt-cmd-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
