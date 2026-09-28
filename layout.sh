@@ -7,7 +7,7 @@ home_ws() {
   case "$1" in
   com.apple.iCal) echo C ;;
   com.apple.mail) echo M ;;
-  net.ankiweb.dtop) echo A ;;
+  net.ankiweb.anki) echo A ;;
   com.anthropic.claudefordesktop) echo I ;;
   com.vivaldi.Vivaldi) echo V ;;
   com.brave.Browser) echo B ;;
@@ -81,7 +81,10 @@ first_window_in_ws() {
 }
 
 case "$1" in
-work1) place com.mitchellh.ghostty com.anthropic.claudefordesktop; widen com.mitchellh.ghostty ;;
+work1)
+  place com.mitchellh.ghostty com.anthropic.claudefordesktop
+  widen com.mitchellh.ghostty
+  ;;
 work2) place com.vivaldi.Vivaldi md.obsidian com.anthropic.claudefordesktop ;;
 work3) place md.obsidian info.sioyek.sioyek com.anthropic.claudefordesktop ;;
 restore)

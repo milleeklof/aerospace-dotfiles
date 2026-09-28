@@ -238,7 +238,7 @@ if.app-id = 'com.anthropic.claudefordesktop'
 run = 'move-node-to-workspace I'
 
 [[on-window-detected]]
-if.app-id = 'net.ankiweb.dtop'
+if.app-id = 'net.ankiweb.anki'
 run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
